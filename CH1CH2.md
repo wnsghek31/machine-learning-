@@ -291,7 +291,7 @@ one vs one 방식은 K 개의 타겟 클래스가 존재하는 경우, 이 중 2
 
 다양한 알고리즘을 사용하여 기초모형을 개발하고 기초모형의 예측값을 입력값으로 메타모형을 만들어서, 보다 예측력이 높은 모형을 만드는 것
 
-![](https://github.com/wnsghek31/machine-learning-/blob/master/model stacking.PNG)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/modelstacking.PNG)
 
 모형 쌓기에서 학습데이터를 생성하는 모습이다. 모형1부터 5까지 예측값(Predict)을 생성하고 예측값을 모아서 새로운 학습데이터(New Feature)을 생성한다. 마지막으로 새롭게 생성된 학습데이터를 입력값으로 Model6를 개발한다
 
