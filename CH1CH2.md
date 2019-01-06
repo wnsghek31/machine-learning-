@@ -61,7 +61,7 @@ Variance란 트레이닝 데이터에 너무 민감하게 반응하여 발생.
 높은 Variance를 띄는 모델은 overfitting
 (( 평균은 가운데있지만 뽑을때마다 차이가 클때 ))
 
-![](biasvariance)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/biasvariance.PNG)
 
 빨강 정답 . 파란색은 정답에 분포에서 샘플을 뽑은거
 
