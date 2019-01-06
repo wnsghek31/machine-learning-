@@ -77,6 +77,7 @@ bias는 예측값의 평균과 실제값의 차이로 모델이 맞추지 못하
 학습된 모델이 처음 보는 데이터에 정확하게 예측할수있으면 이를 훈련셋 에서 데스트 셋으로 일반화(generaliztaion) 됬다고 한다. 이게 되야해.
 
 ![](https://github.com/wnsghek31/machine-learning-/blob/master/undeerfitovefit.PNG)
+
 직선은 변동성(fluctuation)이 적어 상대적으로 분산은 작게나타나지만 , 예측값과 평균과 실제값과는 거리가 멀어져 편향은 상대적으로 큼(under)
 복잡한 곡선형 모델은 예측값 평균과 실제값의 거리는 좁아져 상대적으로 편향은 낮지만 , 예측값의 변동성이 커져서 상대적으로 큰 분산 (over)
 
@@ -108,9 +109,10 @@ bias는 예측값의 평균과 실제값의 차이로 모델이 맞추지 못하
 이것은 "local noise"가 학습에 큰 영향을 끼치지 않는다는 것을 의미하며, outlier(특이점) 의 영향을 적게 받도록 하고싶은것이다.
 모든 feautre를 유지하되 w의 크기를 작게 유지하기에 , 많은 feature가 y를 예측하는데 조금식 기여할경우 유용.
 
-L1
+**L1** 
 ![](https://github.com/wnsghek31/machine-learning-/blob/master/L1.PNG)
-L2
+
+**L2** 
 ![](https://github.com/wnsghek31/machine-learning-/blob/master/L2.PNG)
 
 L1 regularization은 통상적으로 상수 값을 빼주도록 되어있기 때문에 작은 가중치들은 거의 0으로 수렴,정말 0 이되기도
@@ -195,8 +197,8 @@ Regression이란 말이 들어가지만 회귀 알고리즘이 아니라 분류 
 
 [종속 변수가 이진적이기 때문에 조건부 확률(P(y│x))의 분포가 정규분포 대신 이항 분포를 따른다는 점이다 ??]
 
-이진 분류에선 값이 0,1 이 되야하기에 값을 0~1로 만들어줘야하는데, linearRegression 으로 값을 예측하면 예측값이 -Inf ~ Inf의 범위를 갖는다.
-그래서 y = w[0] * x[0] + w[1] * x[1] ... + w[p] * x[p] + b 를 간단하게 0~1로 압축시켜주는 함수가 하나 있으면 좋겠다고 생각!
+이진 분류에선 값이 0,1 이 되야하기에 값을 0 ~ 1로 만들어줘야하는데, linearRegression 으로 값을 예측하면 예측값이 -Inf ~ Inf의 범위를 갖는다.
+그래서 y = w[0] * x[0] + w[1] * x[1] ... + w[p] * x[p] + b 를 간단하게 0 ~ 1로 압축시켜주는 함수가 하나 있으면 좋겠다고 생각!
 x값이 -Inf ~ Inf 이지만 y값이 0~1이 되게하는 이 함수를 시그모이드함수라고한다.
 
 ![](https://github.com/wnsghek31/machine-learning-/blob/master/시그모.PNG)
@@ -294,6 +296,7 @@ one vs one 방식은 K 개의 타겟 클래스가 존재하는 경우, 이 중 2
 모형 쌓기에서 학습데이터를 생성하는 모습이다. 모형1부터 5까지 예측값(Predict)을 생성하고 예측값을 모아서 새로운 학습데이터(New Feature)을 생성한다. 마지막으로 새롭게 생성된 학습데이터를 입력값으로 Model6를 개발한다
 
 ![](https://github.com/wnsghek31/machine-learning-/blob/master/모델스테킹.PNG)
+
 Bob,Kate,Mark,Sue를 분류하는 문제에서  KNN과 SVM을 사용했따.
 KNN은 Mark와 Kate를 잘분류하고 , SVM은 BOb과 Sue를 잘 분리하는 장점을 가지고 있끼에 둘을 결합하여 높은 정확도의 모델을 만들었다.
 
