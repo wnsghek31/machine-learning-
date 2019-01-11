@@ -105,9 +105,14 @@ bias는 예측값의 평균과 실제값의 차이로 모델이 맞추지 못하
 (more data beats a better algorithm)
 
 ##### Regularization (정규화,일반화)
+Feature가 너무 많아도 문제가 생긴다. Hypothesis function이 복잡해지기에 이 복잡한 함수는 training set의 데이터 분포를 
+거의 똑같이 모델링할것이다. (overfitting) 즉 정규화는 이 모델이 너무 복잡해지지 않게 제약을 가하는 방법이다.
+
+[정규하] == costfunction을 2차원에서 4차원으로 줄인다고해서 달라지는게있을까?? cost function은  오차의합인데?? costfunction의 차수가낮은것이 overfitting을 막는방법이 되나?? ==
+
 가중치 (w) 의 절대값을 가능한한 작게 만드는것 즉, 특성들이 출력에 주는 영향을 최소한으로 만드는것
 이것은 "local noise"가 학습에 큰 영향을 끼치지 않는다는 것을 의미하며, outlier(특이점) 의 영향을 적게 받도록 하고싶은것이다.
-모든 feautre를 유지하되 w의 크기를 작게 유지하기에 , 많은 feature가 y를 예측하는데 조금식 기여할경우 유용.
+**모든 feautre를 유지하되 w의 크기를 작게 유지하기에 , 많은 feature가 y를 예측하는데 조금식 기여할경우 유용.**
 
 **L1** 
 ![](https://github.com/wnsghek31/machine-learning-/blob/master/L1.PNG)
