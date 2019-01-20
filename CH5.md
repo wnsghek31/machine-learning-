@@ -77,7 +77,7 @@ AUC가 넓으면 이 피쳐들이 좋은 피쳐다 이 판단들이 믿을만한
 Jupyter
 
 
-[사진]
+![](https://github.com/wnsghek31/machine-learning-/blob/master/.PNG)
 
 어떤부분은 확실히 구분되는 부분이있지만
 어쩔수없이 불분명한 부분이 있을수바께없는데 그부분에서 최선의 판단을 내려한다. (초록색라인같은)
