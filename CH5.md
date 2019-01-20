@@ -77,7 +77,7 @@ AUC가 넓으면 이 피쳐들이 좋은 피쳐다 이 판단들이 믿을만한
 Jupyter
 
 
-![](https://github.com/wnsghek31/machine-learning-/blob/master/.PNG)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/사진.PNG)
 
 어떤부분은 확실히 구분되는 부분이있지만
 어쩔수없이 불분명한 부분이 있을수바께없는데 그부분에서 최선의 판단을 내려한다. (초록색라인같은)
@@ -86,7 +86,7 @@ Jupyter
 밑에가  더 분리하기 쉬운데 
 이차이를 구분을 하는게 ROC 커브이다. 
 어떤 판정을 내리는데 이 판정선이 조금 움직이면 어떤 안좋은 결과를 초래하느냐에 대한 얘기가 ROC커브
-
+  
 밑에같이 초록색 선이 약간 바뀌더라고  mis classification이 많이 안생기면 빨간 크래프를 그리는것
 만약에 (두분포가) 많이 겹친다면 직선이 나오는것
 
