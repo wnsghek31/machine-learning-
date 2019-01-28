@@ -2,9 +2,9 @@
 # 1.
 
 
-[뉴럴넷]
+![뉴럴넷](https://github.com/wnsghek31/machine-learning-/blob/master/%EB%89%B4%EB%9F%B4%EB%84%B7.PNG)
 
-[퍼셈트론]
+![퍼셈트론](https://github.com/wnsghek31/machine-learning-/blob/master/%ED%8D%BC%EC%85%89%ED%8A%B8%EB%A1%A0.PNG)
 
 
 입력값들(X)에 가중치를 두어(W) 값(f(x))을 구하고 그 값과 임계치와의 관계를 활성함수(active function)로 판단하여 결과값을 출력하는 것입니다
