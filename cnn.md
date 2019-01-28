@@ -59,9 +59,11 @@ CNN에서 CONV Layer나 Pooling Layer를 반복적으로 거치면 주요 특징
 입력 이미지가 단채널 3x3 이고 , 2x2 인 필터가 있다
 
 필터 1개면
+
 ![](https://github.com/wnsghek31/machine-learning-/blob/master/2x2 1개.PNG)
 
 필터 3개면
+
 ![](https://github.com/wnsghek31/machine-learning-/blob/master/2x2 3개.PNG)
 
 
