@@ -1,46 +1,16 @@
 
-# 1.
-
-
-![뉴럴넷](https://github.com/wnsghek31/machine-learning-/blob/master/%EB%89%B4%EB%9F%B4%EB%84%B7.PNG)
-
-![퍼셈트론](https://github.com/wnsghek31/machine-learning-/blob/master/%ED%8D%BC%EC%85%89%ED%8A%B8%EB%A1%A0.PNG)
-
-
-입력값들(X)에 가중치를 두어(W) 값(f(x))을 구하고 그 값과 임계치와의 관계를 활성함수(active function)로 판단하여 결과값을 출력하는 것입니다
- : 이때 활성함수는 뉴런에서 임계값을 넘었을 때만 출력하는 부분을 표현한 것
 
 ==로지스틱회귀 하나가 퍼셉트론 아닌가?==
 
 
 
-멀티레이어 퍼셉트론 = 신경망
-
-간단한 분류와 같은 것은 왼쪽 처럼 1층의 뉴런만으로 가능하지만 문제가 복잡할수록 불안정해지고 (xor도 처리 못하는…)
-그리고 이렇게 모델을 구성하면 엄청나게 많은 연산을 해야했고… 그 당시 컴퓨터는 절대 불가능
-
-
-실제로 알파고는 13개의 층으로 수백 ~ 수천만개의 연결 고리를 갖고 있었다
 
 
 Overfitting 문제는 Dropout이나 Batch Normalization같은 것으로 해결
- local minima 문제는 backpropagattion이나 데이터와 층을 미리 학습하는 pretraining 방식으로 해결
+local minima 문제는 backpropagattion이나 데이터와 층을 미리 학습하는 pretraining 방식으로 해결
 
 
 
-멀티레이어 퍼셉트론
-
- ‘multi layer perceptron (MLP)’라는 구조만 다룰 것인데, 이 구조는 directed simple graph이고, 같은 layer들 안에서는 서로 connection이 없다. 즉, self-loop와 parallel edge가 없고, layer와 layer 사이에만 edge가 존재하며, 서로 인접한 layer끼리만 edge를 가진다. 즉, 첫번째 layer와 네번째 layer를 직접 연결하는 edge가 없는 것이다
- information progation이 ‘forward’로만 일어나기 때문에 이런 네트워크를 feed-forward network라고 부르기도 한다
-
-
-Gradient vanishing problem
-Back propagation에서 적은 몇개의 hidden layer에서는 되지만 , 여러개 되면못해
-뒤에서 error 를 보낼대 이 의미가 갈수록 약해져서서 앞엔 거의 전달 X -> 학습 X
-
-이문제의 근본 원인이  sigmoid 활성화 함수 미분의 본질때문이다.
-
-(https://brunch.co.kr/@chris-song/39)
 
 GD
 
@@ -154,49 +124,38 @@ W의 행의 수는 피쳐의 개수
 
 ## 뉴럴네트워크
 
-현실적으로 local minimum을 찾는다 . global minimum을 찾을 방법은없다..
 
-이 간단한 gradient descent는 간단할때에만 가능하고 , 
-local minimum을 건너뛰고싶은 경우가 있끼때문에 , 더 좋은 방법을 쓴다
+![뉴럴넷](https://github.com/wnsghek31/machine-learning-/blob/master/%EB%89%B4%EB%9F%B4%EB%84%B7.PNG)
 
+![퍼셈트론](https://github.com/wnsghek31/machine-learning-/blob/master/%ED%8D%BC%EC%85%89%ED%8A%B8%EB%A1%A0.PNG)
 
-
-출력이 n개인 경우  (출력이 n개인 경우가 현실세계에선 많이있따)
-> 게임플레이를 할때 좌표는 x,y로 나타내야하니까
+**입력값들(X)에 가중치를 두어(W) 값(f(x))을 구하고 그 값과 임계치와의 관계를 활성함수(active function)로 판단하여 결과값을 출력하는 것입니다
+ : 이때 활성함수는 뉴런에서 임계값을 넘었을 때만 출력하는 부분을 표현한 것**
 
 
-비선형함수인데 제곱을 취하면 로컬미니멈이 엄청나게생김
+멀티레이어 퍼셉트론 = 신경망
 
-layer가 한개면 한계가있따. 태생적으로 못푸는문제들이.	
+간단한 분류와 같은 것은 왼쪽 처럼 1층의 뉴런만으로 가능하지만 문제가 복잡할수록 불안정해지고 (xor도 처리 못하는…)
+그리고 이렇게 모델을 구성하면 엄청나게 많은 연산을 해야했고… 그 당시 컴퓨터는 절대 불가능
+
+
+**실제로 알파고는 13개의 층으로 수백 ~ 수천만개의 연결 고리를 갖고 있었다**
 
 
 크로스엔트로피에서 -log 를 곱하니까 ,  log 형태의 convex한 cost function이 나오게되서 gradient descent 된다.
 
 크로스엔트로피 ,  소프트맥스 다 exponenetial이 있어서 log를 취했을때 convex
 
-분류문제에 있어서는 sigmoid 나 tanh를 취해주니까 비선형 함수가 된다. 그래서 제곱을 취했을때 로컬미니멈 많이생기는 울퉁불퉁한 그래프가...
-(분류문제 풀라고 시그모이드 취했떠니 비선형이라(?) 제곱하니까 울퉁불퉁하네?? 펴줘야겟다 -> log)
-
 sigmoid tanh  같은것이 다 비선형인데 .. costfunction을 계싼하기위해서 log(?)를 취해서(==log를 취하는게 아닌 다른방법도?==)
 
 
+**분류문제에 있어서는 sigmoid 나 tanh를 취해주니까 비선형 함수가 된다. 그래서 제곱을 취했을때 로컬미니멈 많이생기는 울퉁불퉁한 그래프가...
+(분류문제 풀라고 시그모이드 취했떠니 비선형이라(?) 제곱하니까 울퉁불퉁하네?? 펴줘야겟다 -> log)**
 
-데이터 전처리
+멀티레이어 퍼셉트론
 
-1. 중심점을 0 가까이로 갖다놓는것.
-2. ++표준화(standardization, = normalization 정규분포로 만드는것  )(너무 멀리간 이상값들을 처리할수있따. 영역안으로 넣어서 엄청 큰차이가안나게하는듯?)++
-3. ++스케일링 (min-max scale)++
-
-++는 많이 쓰이는것.
-
-데이터가 많은 경우 validation 까지 ,  파라미터 튜닝용으로 . 데이터많으면 학습한번에 몇일씪 걸리니까....
-
-
-### softmax
-
-Softmax function은 Neural network의 최상위층에 사용하여 Classification을 위한 function으로 사용한다. NN의 최상위 계층에 사실 Sigmoid function을 사용하여 실제값과 출력값을 차이를 error function으로 사용해도 된다. 하지만 Softmax function을 사용하는 주요한 이유는 결과를 확률값으로 해석하기 위함( 다른 출력값들과 상대적 비교과 된다. 클래스들 확률 합은 1이 되기에 normalization 효과까지)
-
-※. Softmax function은 logistic regression이 2가지 레이블 분류하는 것과 달리 여러개의 label에 대해서도 분류(multiclas classification)를 가능하게 한다. 2개의 레이블에 대한 분류에 대해 Softmax function과 logistic function은 같다(동치). 
+ ‘multi layer perceptron (MLP)’라는 구조만 다룰 것인데, 이 구조는 directed simple graph이고, 같은 layer들 안에서는 서로 connection이 없다. 즉, self-loop와 parallel edge가 없고, layer와 layer 사이에만 edge가 존재하며, 서로 인접한 layer끼리만 edge를 가진다. 즉, 첫번째 layer와 네번째 layer를 직접 연결하는 edge가 없는 것이다
+ information progation이 ‘forward’로만 일어나기 때문에 이런 네트워크를 feed-forward network라고 부르기도 한다
 
 
 ### Activation Function
@@ -216,8 +175,14 @@ Activation function은 말 글대로 활성함수로 각 뉴런에 입력된 데
 
 backpropagation이 뒤로가면서 학습시키는데 , 뒤쪽으로 갈수록 영향을 못미쳤따. (5~6년전 해결)
 
-XOR문제인데도 9 depth 까지가면 0.5의 정확도가나온다 2depth만해도 1 나왔엇는데,
+**XOR문제인데도 9 depth 까지가면 0.5의 정확도가나온다 2depth만해도 1 나왔엇는데,**
 
+**Back propagation에서 적은 몇개의 hidden layer에서는 되지만 , 여러개 되면못해
+뒤에서 error 를 보낼대 이 의미가 갈수록 약해져서서 앞엔 거의 전달 X -> 학습 X**
+
+**이문제의 근본 원인이  sigmoid 활성화 함수 미분의 본질때문이다.**
+
+(https://brunch.co.kr/@chris-song/39)
 
 
 #### ReLU ( Max(0,x) )
@@ -233,6 +198,57 @@ sigmoid fuction으로 인해 0~1의 값을 가지는데, gradient descent를 사
 
 ==시그모이드함수에서의 경사값이아니라, 시그모이드함수에서나온 결과에 코스트함수에서의 경사
 그러니까 ReuLU를 써서 정확도가 올라가지 . 이건 음수는 0으로 만들어버리니까  (먼소리지)==
+
+
+
+현실적으로 local minimum을 찾는다 . global minimum을 찾을 방법은없다..
+
+이 간단한 gradient descent는 간단할때에만 가능하고 , 
+local minimum을 건너뛰고싶은 경우가 있끼때문에 , 더 좋은 방법을 쓴다
+
+출력이 n개인 경우  (출력이 n개인 경우가 현실세계에선 많이있따)
+> 게임플레이를 할때 좌표는 x,y로 나타내야하니까
+
+
+비선형함수인데 제곱을 취하면 로컬미니멈이 엄청나게생김
+
+layer가 한개면 한계가있따. 태생적으로 못푸는문제들이.	
+
+
+크로스엔트로피에서 -log 를 곱하니까 ,  log 형태의 convex한 cost function이 나오게되서 gradient descent 된다.
+
+크로스엔트로피 ,  소프트맥스 다 exponenetial이 있어서 log를 취했을때 convex
+
+
+sigmoid tanh  같은것이 다 비선형인데 .. costfunction을 계싼하기위해서 log(?)를 취해서(==log를 취하는게 아닌 다른방법도?==)
+
+
+
+데이터 전처리
+
+1. 중심점을 0 가까이로 갖다놓는것.
+2. ++표준화(standardization, = normalization 정규분포로 만드는것  )(너무 멀리간 이상값들을 처리할수있따. 영역안으로 넣어서 엄청 큰차이가안나게하는듯?)++
+3. ++스케일링 (min-max scale)++
+
+++는 많이 쓰이는것.
+
+데이터가 많은 경우 validation 까지 ,  파라미터 튜닝용으로 . 데이터많으면 학습한번에 몇일씪 걸리니까....
+
+
+### softmax , CrossEntropy
+
+Softmax function은 Neural network의 최상위층에 사용하여 Classification을 위한 function으로 사용한다. NN의 최상위 계층에 사실 Sigmoid function을 사용하여 실제값과 출력값을 차이를 error function으로 사용해도 된다. 하지만 Softmax function을 사용하는 주요한 이유는 결과를 확률값으로 해석하기 위함( 다른 출력값들과 상대적 비교과 된다. 클래스들 확률 합은 1이 되기에 normalization 효과까지)
+
+※. Softmax function은 logistic regression이 2가지 레이블 분류하는 것과 달리 여러개의 label에 대해서도 분류(multiclas classification)를 가능하게 한다. 2개의 레이블에 대한 분류에 대해 Softmax function과 logistic function은 같다(동치). 
+
+
+
+Softmax(소프트맥스)는 입력받은 값을 출력으로 0~1사이의 값으로 모두 정규화하며 출력 값들의 총합은 항상 1이 되는 특성을 가진 함수
+
+logistic regression 한것도 확률값
+sigmoid를 확장시켜 만든 softmax (k=2 이면 sigmoid랑 같은형태)
+
+이 식을 토대로 비용함수를 구하는 방식이 Cross entropy
 
 
 ### 초기값설정
