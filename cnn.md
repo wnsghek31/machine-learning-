@@ -60,11 +60,11 @@ CNN에서 CONV Layer나 Pooling Layer를 반복적으로 거치면 주요 특징
 
 필터 1개면
 
-![](https://github.com/wnsghek31/machine-learning-/blob/master/2x2 1개.PNG)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/2x2.PNG)
 
 필터 3개면
 
-![](https://github.com/wnsghek31/machine-learning-/blob/master/2x2 3개.PNG)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/2x23.PNG)
 
 
 필터가 3개라서 출력 이미지도 필터 수에 따라 3개로 늘어났따.
