@@ -46,6 +46,8 @@ Fully Connected Layer (Dense Layer) 만으로 구성된 인공 신경망의 입�
 
 http://umbum.tistory.com/223a
 
+![](https://github.com/wnsghek31/machine-learning-/blob/master/cnn%20%EC%B6%94%EC%B6%9C.PNG)
+
 ##### 패딩
 테두리에 0 넣는거
 합성곱 연산을 거칠때마다 크기가 작아지게 되는데 출력 크기가 너무 줄어드는것을 막기위해 !
