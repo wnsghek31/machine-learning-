@@ -159,6 +159,9 @@ sigmoid tanh  같은것이 다 비선형인데 .. costfunction을 계싼하기�
 
 ### back propagiation
 
+우리의 목적은 뉴럴네트워크의 오차를 줄이는 데 있기 때문에, 정답과 비교한 뒤 Loss를 구하고
+각 파라메터별로 Loss에 대한 그래디언트를 구한 뒤 그래디언트들이 향한 쪽으로 파라메터들을 업데이트
+ 
 ![](https://github.com/wnsghek31/machine-learning-/blob/master/%EB%B0%B1%ED%94%84%ED%94%84.jpg)
 
 즉, 자칫하면 뉴럴 네트워크의 학습 과정을 추상적으로만 생각하고 지나가버리는 함정에 빠질 수 있다는 것!
