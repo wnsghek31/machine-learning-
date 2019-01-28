@@ -59,39 +59,43 @@ CNN에서 CONV Layer나 Pooling Layer를 반복적으로 거치면 주요 특징
 입력 이미지가 단채널 3x3 이고 , 2x2 인 필터가 있다
 
 필터 1개면
-(사진)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/2x2 1개.PNG)
 
 필터 3개면
-(사진)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/2x2 3개.PNG)
+
 
 필터가 3개라서 출력 이미지도 필터 수에 따라 3개로 늘어났따.
 총 가중치 수는 3x2x2 로 12개 (4개씩인 필터가 세개)
 **필터마다 고유한 특징을 뽑아 고유한 출력 이미지로 만들기 때문에 필터의 출력값을 더해서 하나의 이미지로 만들거나 그렇게 하지 않는다.** 
 
 이런느김 3개가 나오는것과 같은 이치
-(사진)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/필터3개.PNG)
 
-(표현1)
+
+![](https://github.com/wnsghek31/machine-learning-/blob/master/표현1.PNG)
 
 
 이번에는 입력 이미지의 채널이 3개이고 사이즈가 3x3 , 필터 2x2 1개 사용
 
-(채널31)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/채널31.PNG)
+
 
 필터개수가 3개인것처럼 보이나 이는 입력 이미지에 따라 할당되는 커널이고, 각 커널의 계산 값이 결국 더해져서 출력 이미지 한장을 만들어내므로 필터 개수는 1개이다
 > 이는 Dense 레이어에서 입력 뉴런이 늘어나면 거기에 상응하는 시냅스에 늘어나서 가중치의 수가 늘어나는 것과 같은 원리입니다
 
 가중치는 2 x 2 x 3으로 총 12개 이지만 필터 수는 1개
 
-(채널32)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/채널32.PNG)
 
 마지막으로 입력 이미지의 사이즈가 3x3 이고 , 채널이 3개이고 , 사이즈가 2x2인 필터가 2개인 경우를 살펴본다.
 
-(막1)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/막1.PNG)
 
 필터가 2개이므로 출력이미지도 2개이다
 
-(막2)다다
+![](https://github.com/wnsghek31/machine-learning-/blob/master/.PNG)
+
 
 # 여기까지봣다
 
