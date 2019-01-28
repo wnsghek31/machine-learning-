@@ -157,6 +157,13 @@ sigmoid tanh  같은것이 다 비선형인데 .. costfunction을 계싼하기�
  ‘multi layer perceptron (MLP)’라는 구조만 다룰 것인데, 이 구조는 directed simple graph이고, 같은 layer들 안에서는 서로 connection이 없다. 즉, self-loop와 parallel edge가 없고, layer와 layer 사이에만 edge가 존재하며, 서로 인접한 layer끼리만 edge를 가진다. 즉, 첫번째 layer와 네번째 layer를 직접 연결하는 edge가 없는 것이다
  information progation이 ‘forward’로만 일어나기 때문에 이런 네트워크를 feed-forward network라고 부르기도 한다
 
+### back propagiation
+
+![](https://github.com/wnsghek31/machine-learning-/blob/master/백프.PNG)
+
+즉, 자칫하면 뉴럴 네트워크의 학습 과정을 추상적으로만 생각하고 지나가버리는 함정에 빠질 수 있다는 것!
+실제로 구현해보지 않고 머리로만 이해한 사람은 신경망을 설계할 때, 단순히 layer를 쌓아주기만 하면 역전파(Backprop)가 "magically make them work on your data"라고 믿게 될 수 있으나...
+
 
 ### Activation Function
 
@@ -167,7 +174,6 @@ Activation function은 말 글대로 활성함수로 각 뉴런에 입력된 데
 
 
 ## 깊이가 깊어질때의 문제
-
 
 잘못된 비선형 함수를 사용해서  결정적으로 성능이 안나왔떤것이다. 
 
