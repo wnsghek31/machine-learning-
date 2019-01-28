@@ -159,7 +159,7 @@ sigmoid tanh  같은것이 다 비선형인데 .. costfunction을 계싼하기�
 
 ### back propagiation
 
-![](https://github.com/wnsghek31/machine-learning-/blob/master/백프.PNG)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/%EB%B0%B1%ED%94%84.jpg)
 
 즉, 자칫하면 뉴럴 네트워크의 학습 과정을 추상적으로만 생각하고 지나가버리는 함정에 빠질 수 있다는 것!
 실제로 구현해보지 않고 머리로만 이해한 사람은 신경망을 설계할 때, 단순히 layer를 쌓아주기만 하면 역전파(Backprop)가 "magically make them work on your data"라고 믿게 될 수 있으나...
