@@ -16,7 +16,7 @@ tf.reset_default_graph()
 
 ## Convolution layer
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/1.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/1.PNG)
 
 첫번째로 하는일이
 이미지를 보고 vertical edges , horizontal edges 를 찾는것 
@@ -30,8 +30,7 @@ convolution이 이 사진과 filter의 각 해당하는 행렬 부붙 곱해서 
 
 이런 convolution 하는걸  tf.nn.conv2d
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/2.PNG)
-
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/2.PNG)
 
 결과의 흰색부분이 원본사진의 중간선을 의미하는것이다. (이미지 가운데 강한 경계선이 있다는것을 알려주는) 
 조금 두껍긴하지만 이것은 굉장히 작은 이미지를 예로 하고있기때문에 그런것
@@ -113,7 +112,7 @@ RGB이미지
 가로와 세로 윤곽선처럼 두개의 특성 또는 수백개의 특성들을 검출할수있고 그 결과는 **검출하고자 하는 특성의 수만큼 채널을 가지게 되는것** 
 (여기서 체널은 결과가 4x4x1 나온거의 개수를 의미한다 RGB채널개수가아님 위에서 4x4x2에서의 2값)
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/4.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/4.PNG)
 
 6x6x3 --> 4x4x2 (2개의 filter니까(3x3x3))
 
@@ -123,7 +122,8 @@ RGB이미지
 입력이미지의 크기가 1000x1000 이거나 5000x5000이거나에 상관없이 280개의 변수이다.  열개의 채널인거지!!(필터의 개수니까)
 아주 큰 이미지라도 적은 수의 변수로 가능 **이것이 과대적합을 방지하는 CNN의 한 특징**
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/5.PNG)
+
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/5.PNG)
 
 convolution layer 서의 
 convoution ,bias , ReLu ,하는게 fully connected layer에서의 y=ax+b에다가 ReLU 취해주는거랑 같다.
@@ -133,7 +133,7 @@ f^[l]로 필터 크기를 나타냄 (fxf)
 
 채널의수 nc는 필터의 수이다. 
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/6.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/6.PNG)
 
 Convolution layer의 작업들 
 
@@ -157,7 +157,7 @@ max poolin에서는 패딩 거의 안쓴다.
 max pooling이 average pooling 보다 훨씬 많이 사용되지만 ,  하나의 예외는 신경망 아주 깊은 곳에서 평균 풀링을 사용해서 7x7x1000의 값을 1x1x1000 으로 만든다.
 
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/7.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/7.PNG)
 
 5x5x16 -> 400개의 노드 로 만들고 이걸 120개의 노드로 만들면 이 120개있는 층이 첫번째 fully connected layer 이다. 
 왜나햐면 400노드와 120노드가 모두 연결 되있기 때문에. (단일 신경망 층과 유사하다.)
@@ -179,14 +179,14 @@ max pooling이 average pooling 보다 훨씬 많이 사용되지만 ,  하나의
 
 ## fully connected layer 사용보다 conv layer 사용의 이점
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/9.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/9.PNG)
 
 만약 위에껄 fully connected layer로 연결한다면 3072* 4704개의 변수.
 그러나 Conv layer는 필터에는 (5*5 + 1) 개의 변수를 갖고 6개 있으니 156개의 변수를갖는다.
 
 ### Parameter Sharing , Sparsity of Connection
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/8.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/8.PNG)
 
 이렇게 적은 변수 갖는 이유가 하나는 parameter sharing
 필터들이(세로 윤곽선 같은 ) 이미지에 각부분에 움직이면서 연산하기에 이미지에 여러부분에서 쓰임. 그렇기에 적은 파라미터가 드는거 .
@@ -235,7 +235,7 @@ skip connection
 한층의 활성값을 가지고 훨씬 깊은 층에 적용하는 방식
 ResNet에서쓰임
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/10.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/10.PNG)
 
 그림이 적철치 않다 a[l]이 없어서.
 
@@ -245,7 +245,7 @@ a^[l]이 short cut으로 인해 정보가 신경망의 더 깊은곳으로 갈�
 
 Residual block을 사용하면 신경망을 훨씬 더 깊게 훈련 시킬수잇다.
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/11.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/11.PNG)
 
 ==그림에서 처럼 w[l+2]a[l+1] + b[l+2] 가 0이 되면 추가한 a[l]은 0이상의 값이기 떄문에 손해가 없는거같음. 0이나 작은값으로 가면 안좋은데 선형 함수에서 0이 나와도 뒤에 붙혀둔 a[l]이 그것을 0이 아니게 할 가능성이 크니까 성능이 좋아지는게 아닐까?? 자세한 기술적 내용은 잘 모르겠따.==
 
@@ -265,7 +265,7 @@ Residual block을 사용하면 신경망을 훨씬 더 깊게 훈련 시킬수�
 
 6x6x1 처럼 1채널이아닌 6x6x32 같이 여러 채널이 있을때 1x1 필터와 합성곱을 하는것을 훨씬 의미가 크다.
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/1x1.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/1x1.PNG)
 
 6x6x32 에 1x1x32 필터를 곱한다면 
 6x6에서의 한칸 (32채널이니까 그 같은위치에 값은 32개있는것) 그러니 32개의 숫자들이 각각 곱해져서 더해진다. 그뒤에 ReLU 취하면 한점이되서 나온다 (6x6 에서의 한점)
@@ -291,7 +291,7 @@ fully connected neural network를 36개의 위치에 각각 적용해서 32개�
 
 즉 필터의 크기나 풀링을 결정하는 대신 그것들을 전부다 적용해서 출력들을 다 엮어낸뒤 , 네트워크가 스스로 원하는 변수나 필터 크기의 조합을 학습하게 하는것
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/12.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/12.PNG)
 
 다른 크기의 필더들은 same convolution 해줘서 28x28이되게한다.
 맥스풀링또한 28x28 이 되게 해줘야한다. 
@@ -300,7 +300,7 @@ fully connected neural network를 36개의 위치에 각각 적용해서 32개�
 
 문제는 계산비용이여
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/13.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/13.PNG)
 
 위에 5x5가 나오게 연산하려면
 
@@ -309,7 +309,7 @@ fully connected neural network를 36개의 위치에 각각 적용해서 32개�
 5*5*192*28*28*32 로 1억2천만개나 되는 변수가나온다.
 (필터 변수개수 * 아웃풋 변수개수)
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/14.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/14.PNG)
 
 그런데 1x1을 쓰면
 
@@ -328,7 +328,7 @@ fully connected neural network를 36개의 위치에 각각 적용해서 32개�
 **shrinking down the representation size 하는것이 성능에 지장에 줄거라는 걱정 할수있는데 , bottle neck layer를 적절히 구현한다면 representation size 크기를 줄이는 동시에 성능에 큰 지장없이 많은 수의 계싼을 줄일수있따.**
 
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/15.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/15.PNG)
 
 ==activation or output from some previous layer를 인셉션 모듈의 인풋으로 받는다는데 이것들이 정확히 모지??==
 
@@ -338,7 +338,7 @@ fully connected neural network를 36개의 위치에 각각 적용해서 32개�
 
 pooling layer 하면 채널수는 그대로이니까 1x1 conv 해서 채널수도 줄여주는것.
 
-![](https://github.com/wnsghek31/machine-learning-/edit/master/deeplearning.ai/16.PNG)
+![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/16.PNG)
 
 중간중간 POOL이 적용되있는 인셉션 모듈이 있낀하지만 이런 기본적인 인셉션 모듈이 네트워크 상에서 반복되는 이런게 인셉션 네트워크
 밑에 곁가지들은 은닉층을 가지고 예측을 하는것
