@@ -63,7 +63,7 @@ Bias란 학습데이터를 충분히 표현할 수 없기 때문에 발생. 충�
 Variance란 트레이닝 데이터에 너무 민감하게 반응하여 발생.
 높은 Variance를 띄는 모델은 overfitting
 
-![](https://github.com/wnsghek31/machine-learning-/blob/master/biasvariance.PNG)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/deeplearning.ai/1.png)
 
 variance는 예측한 값이 예측값의 평균을 중심으로 얼마나 퍼져있는지를 나타내주고 (예측값이 얼마나 큰 변동성을 갖고있냐), 
 bias는 예측값의 평균과 실제값의 차이로 모델이 맞추지 못하는 부분을 나타낸다 (예측값이 '전반적으로' 실제값을 얼마나 정확하게 예측하냐).
