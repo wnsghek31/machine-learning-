@@ -16,7 +16,7 @@ tf.reset_default_graph()
 
 ## Convolution layer
 
-![](https://github.com/wnsghek31/machine-learning-/tree/master/deeplearning.ai/1.png)
+![](https://github.com/wnsghek31/machine-learning-/blob/master/deeplearning.ai/1.png)
 
 첫번째로 하는일이
 이미지를 보고 vertical edges , horizontal edges 를 찾는것 
